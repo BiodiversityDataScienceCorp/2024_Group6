@@ -13,3 +13,4 @@ Our species is *Pekania pennanti*, The Fisher
 **Jessica's Favorite Species:** My favorite species is the *Enhydra Lutris*, known as the Sea Otter. Being from California and seeing Marine Life such as Otters, fascinated me. Southern Sea Otters are among the smallest of marine mammals with adult females averaging 46 and 64 pounds. Due to the fact, that Sea Otters lack blubber, they rely on their dense fur coat and elevated metabolism to stay warm. Sea Otters consume an amount of food equivalent to about 25 percent of their body mass per day. They are social mammals and usually are in a cluster to keep them from drifting they wrap themselves up in kelp or seagrass. Sea Otters are creative in using tools, typically a rock is used to break open a hard-shelled prey.
 ---
 
+
