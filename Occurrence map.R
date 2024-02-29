@@ -4,6 +4,8 @@ library(leaflet)
 library(mapview)
 library(webshot2)
 
+data<- read_csv("data/cleanedData.csv")
+
 # Generate occurrence map
 map <- leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
   # The options bit removes the zoom button
@@ -24,8 +26,7 @@ map <- leaflet(options = leafletOptions(zoomControl = FALSE)) %>%
   addLegend(position = "topright",
             title = "Species Occurences from GBIF",
             labels = "Columbia torrent salamander",
-            colors = "coral",
-            opacity = 0)
-
+            colors = "coral")
+map
 # Save the map
-mapshot2(map, file = "output/leafletTest.png")
+mapshot2(map, file = "output/leafletTest2.png")
