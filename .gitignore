@@ -51,5 +51,6 @@ rsconnect/
 #climate data
 data/wc2.1_2.5m/
 
-
+#future climate data
+data/cmip6/
 

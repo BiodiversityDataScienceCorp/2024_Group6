@@ -163,7 +163,7 @@ ggplot() +
   scale_size_area() +
   borders("state") +
   borders("world", colour = "black", fill = NA) + 
-  labs(title = "SDM of Rhyacotriton americanus Under Current Climate Conditions",
+  labs(title = "SDM of Rhyacotriton cascadae Under Current Climate Conditions",
        x = "longitude",
        y = "latitude",
        fill = "Environmental Suitability")+ 
@@ -196,37 +196,37 @@ geographicAreaFutureC6 <- crop(futureClimateRaster, predictExtent)
 
 # 8. Run the future SDM
 
-habronattusFutureSDM <- raster::predict(habronattusCurrentSDM, geographicAreaFutureC6)
+rhyacotritonFutureSDM <- raster::predict(rhyacotritonCurrentSDM, geographicAreaFutureC6)
 
 
 # 9. Plot the future SDM
 
 
-habronattusFutureSDMDf <- as.data.frame(habronattusFutureSDM, xy=TRUE)
+rhyacotritonFutureSDMDf <- as.data.frame(rhyacotritonFutureSDM, xy=TRUE)
 
 
-xmax <- max(habronattusFutureSDMDf$x)
-xmin <- min(habronattusFutureSDMDf$x)
-ymax <- max(habronattusFutureSDMDf$y)
-ymin <- min(habronattusFutureSDMDf$y)
+xmax <- max(rhyacotritonFutureSDMDf$x)
+xmin <- min(rhyacotritonFutureSDMDf$x)
+ymax <- max(rhyacotritonFutureSDMDf$y)
+ymin <- min(rhyacotritonFutureSDMDf$y)
 
 
 ggplot() +
   geom_polygon(data = wrld, mapping = aes(x = long, y = lat, group = group),
                fill = "grey75") +
-  geom_raster(data = habronattusFutureSDMDf, aes(x = x, y = y, fill = maxent)) + 
+  geom_raster(data = rhyacotritonFutureSDMDf, aes(x = x, y = y, fill = maxent)) + 
   scale_fill_gradientn(colors = terrain.colors(10, rev = T)) +
   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = F) +
   scale_size_area() +
   borders("state") +
   borders("world", colour = "black", fill = NA) + 
-  labs(title = "Future SDM of Habronattus americanus Under CMIP6 Climate Conditions",
+  labs(title = "Future SDM of Rhyacotriton cascadae Under CMIP6 Climate Conditions",
        x = "longitude",
        y = "latitude",
        fill = "Env Suitability") +
   theme(legend.box.background=element_rect(),legend.box.margin=margin(5,5,5,5)) 
 
-ggsave("output/habronattusFutureSdm.jpg",  width = 8, height = 6)
+ggsave("output/rhyacotritonFutureSdm.jpg",  width = 8, height = 6)
 
 
 
