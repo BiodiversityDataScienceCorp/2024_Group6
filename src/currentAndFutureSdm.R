@@ -119,7 +119,7 @@ presenceAbsenceEnvDf <- as.data.frame(rbind(occEnv, absenceEnv))
 
 
 # If you get a Java error, restart R, and reload the packages
-habronattusCurrentSDM <- dismo::maxent(x = presenceAbsenceEnvDf, ## env conditions
+rhyacotritonCurrentSDM <- dismo::maxent(x = presenceAbsenceEnvDf, ## env conditions
                                        p = presenceAbsenceV,   ## 1:presence or 0:absence
                                        path=paste("maxent_outputs"), #maxent output dir 
 )                              
@@ -135,42 +135,42 @@ geographicArea <- crop(currentClimRasterStack, predictExtent, snap = "in")
 
 
 
-habronattusPredictPlot <- raster::predict(habronattusCurrentSDM, geographicArea) 
+rhyacotritonPredictPlot <- raster::predict(rhyacotritonCurrentSDM, geographicArea) 
 
 
 
-raster.spdf <- as(habronattusPredictPlot, "SpatialPixelsDataFrame")
+raster.spdf <- as(rhyacotritonPredictPlot, "SpatialPixelsDataFrame")
 
-habronattusPredictDf <- as.data.frame(raster.spdf)
+rhyacotritonPredictDf <- as.data.frame(raster.spdf)
 
 
 wrld <- ggplot2::map_data("world")
 
 
 
-xmax <- max(habronattusPredictDf$x)
-xmin <- min(habronattusPredictDf$x)
-ymax <- max(habronattusPredictDf$y)
-ymin <- min(habronattusPredictDf$y)
+xmax <- max(rhyacotritonPredictDf$x)
+xmin <- min(rhyacotritonPredictDf$x)
+ymax <- max(rhyacotritonPredictDf$y)
+ymin <- min(rhyacotritonPredictDf$y)
 
 
 ggplot() +
   geom_polygon(data = wrld, mapping = aes(x = long, y = lat, group = group),
                fill = "grey75") +
-  geom_raster(data = habronattusPredictDf, aes(x = x, y = y, fill = layer)) + 
+  geom_raster(data = rhyacotritonPredictDf, aes(x = x, y = y, fill = layer)) + 
   scale_fill_gradientn(colors = terrain.colors(10, rev = T)) +
   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = F) +#expand=F fixes margin
   scale_size_area() +
   borders("state") +
   borders("world", colour = "black", fill = NA) + 
-  labs(title = "SDM of Habronattus americanus Under Current Climate Conditions",
+  labs(title = "SDM of Rhyacotriton americanus Under Current Climate Conditions",
        x = "longitude",
        y = "latitude",
        fill = "Environmental Suitability")+ 
   theme(legend.box.background=element_rect(),legend.box.margin=margin(5,5,5,5)) 
 
 
-ggsave("output/habronattusCurrentSdm.jpg",  width = 8, height = 6)
+ggsave("output/rhyacotritonCurrentSdm.jpg",  width = 8, height = 6)
 
 #### End Current SDM #########
 
