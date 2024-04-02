@@ -29,4 +29,4 @@ map <- leaflet(options = leafletOptions(zoomControl = FALSE)) %>%
             colors = "coral")
 map
 # Save the map
-mapshot2(map, file = "output/leafletTest2.png")
+mapshot2(map, file = "output/rhyacotritonOccurenceMap.png")
