@@ -7,14 +7,14 @@
 # More info: https://pcmdi.llnl.gov/CMIP6/
 
 futureClimateRaster <- cmip6_world("CNRM-CM6-1", "585", "2061-2080", var = "bioc", res=2.5, path="data/cmip6")
-
+futureClimateRaster <- rast(futureClimateRaster)
 # 7. Prep for the model
 
 
 names(futureClimateRaster)=names(currentClimRasterStack)
 
 
-geographicAreaFutureC6 <- crop(futureClimateRaster, predictExtent)
+geographicAreaFutureC6 <- crop(futureClimateRaster, extent(currentClimRasterStack))
 
 
 # 8. Run the future SDM
