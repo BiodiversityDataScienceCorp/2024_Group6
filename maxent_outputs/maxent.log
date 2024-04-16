@@ -1,9 +1,9 @@
-Tue Apr 16 16:37:58 UTC 2024
+Tue Apr 16 16:55:51 UTC 2024
 MaxEnt version 3.4.3
 Reading file absence
-readGrid: max memory 536870912, total allocated 270532608, free 104312496, used 166220112, increment 38187728
+readGrid: max memory 536870912, total allocated 270532608, free 149309280, used 121223328, increment 102237792
 Reading samples from presence
-Read samples: max memory 536870912, total allocated 270532608, free 259935680, used 10596928, increment -155623184
+Read samples: max memory 536870912, total allocated 270532608, free 146163552, used 124369056, increment 3145728
 Adding samples to background in feature space
 Command line used:  autorun -e maxent_outputs/absence -o maxent_outputs -s maxent_outputs/presence -z
 Command line to repeat: java density.MaxEnt nowarnings noprefixes outputdirectory=maxent_outputs samplesfile=maxent_outputs/presence environmentallayers=maxent_outputs/absence autorun novisible
@@ -16,18 +16,18 @@ environmentallayers: maxent_outputs/absence
 autorun: true
 visible: false
 
-getSamples: max memory 536870912, total allocated 270532608, free 255741376, used 14791232, increment 4194304
+getSamples: max memory 536870912, total allocated 270532608, free 141969248, used 128563360, increment 4194304
 Making features
-makeFeatures: max memory 536870912, total allocated 270532608, free 254165008, used 16367600, increment 1576368
+makeFeatures: max memory 536870912, total allocated 270532608, free 140920672, used 129611936, increment 1048576
 species: 
 Regularization values: linear/quadratic/product: 0.050, categorical: 0.250, threshold: 1.000, hinge: 0.500
 234 samples
-Density: max memory 536870912, total allocated 270532608, free 251547072, used 18985536, increment 2617936
-linearPredictor: max memory 536870912, total allocated 270532608, free 251547072, used 18985536, increment 0
-FeaturedSpace: max memory 536870912, total allocated 270532608, free 251547072, used 18985536, increment 0
-Sequential: max memory 536870912, total allocated 270532608, free 251547072, used 18985536, increment 0
+Density: max memory 536870912, total allocated 270532608, free 139349856, used 131182752, increment 1570816
+linearPredictor: max memory 536870912, total allocated 270532608, free 139349856, used 131182752, increment 0
+FeaturedSpace: max memory 536870912, total allocated 270532608, free 139349856, used 131182752, increment 0
+Sequential: max memory 536870912, total allocated 270532608, free 139349856, used 131182752, increment 0
 Initial loss: 6.077642243349034
-500: time = 0.447000 loss = 5.847453
+500: time = 0.445000 loss = 5.847453
 Resulting gain: 0.2301887690288824
 Projecting...
 Writing file maxent_outputs/species.csv

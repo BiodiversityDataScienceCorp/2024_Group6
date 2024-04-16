@@ -163,7 +163,7 @@ ggplot() +
   scale_size_area() +
   borders("state") +
   borders("world", colour = "black", fill = NA) + 
-  labs(title = "SDM of Rhyacotriton cascadae Under Current Climate Conditions",
+  labs(title = "SDM of Rhyacotriton kezeri Under Current Climate Conditions",
        x = "longitude",
        y = "latitude",
        fill = "Environmental Suitability")+ 
