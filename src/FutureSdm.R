@@ -42,7 +42,7 @@ ggplot() +
   scale_size_area() +
   borders("state") +
   borders("world", colour = "black", fill = NA) + 
-  labs(title = "Future SDM of Rhyacotriton cascadae Under CMIP6 Climate Conditions",
+  labs(title = "Future SDM of Rhyacotriton cascadae Under CMIP6",
        x = "longitude",
        y = "latitude",
        fill = "Env Suitability") +
