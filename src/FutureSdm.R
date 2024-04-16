@@ -7,14 +7,14 @@
 # More info: https://pcmdi.llnl.gov/CMIP6/
 
 futureClimateRaster <- cmip6_world("CNRM-CM6-1", "585", "2061-2080", var = "bioc", res=2.5, path="data/cmip6")
-futureClimateRaster <- rast(futureClimateRaster)
+
 # 7. Prep for the model
 
 
 names(futureClimateRaster)=names(currentClimRasterStack)
 
 
-geographicAreaFutureC6 <- crop(futureClimateRaster, extent(currentClimRasterStack))
+geographicAreaFutureC6 <- crop(futureClimateRaster, predictExtent)
 
 
 # 8. Run the future SDM
@@ -33,13 +33,12 @@ xmin <- min(rhyacotritonFutureSDMDf$x)
 ymax <- max(rhyacotritonFutureSDMDf$y)
 ymin <- min(rhyacotritonFutureSDMDf$y)
 
-
 ggplot() +
   geom_polygon(data = wrld, mapping = aes(x = long, y = lat, group = group),
                fill = "grey75") +
   geom_raster(data = rhyacotritonFutureSDMDf, aes(x = x, y = y, fill = maxent)) + 
-  scale_fill_gradientn(colors = terrain.colors(10, rev = T)) +
-  coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = F) +
+  scale_fill_gradientn(colors = c("red", "orange", "yellow", "green"), limits = c(0, 0.8)) +
+  coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = FALSE) +
   scale_size_area() +
   borders("state") +
   borders("world", colour = "black", fill = NA) + 

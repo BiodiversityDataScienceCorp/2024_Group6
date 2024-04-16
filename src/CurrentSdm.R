@@ -158,8 +158,8 @@ ggplot() +
   geom_polygon(data = wrld, mapping = aes(x = long, y = lat, group = group),
                fill = "grey75") +
   geom_raster(data = rhyacotritonPredictDf, aes(x = x, y = y, fill = layer)) + 
-  scale_fill_gradientn(colors = terrain.colors(10, rev = T)) +
-  coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = F) +#expand=F fixes margin
+  scale_fill_gradientn(colors = c("red", "orange", "yellow", "green"), limits = c(0, 0.85)) +
+  coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = FALSE) +
   scale_size_area() +
   borders("state") +
   borders("world", colour = "black", fill = NA) + 
