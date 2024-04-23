@@ -14,36 +14,27 @@ Our species is *Rhyacotriton kezeri*, also known as the the Columbia Torrent Sal
 The NatureServe status of *R. kezeri* is listed as Imperiled. This species is scheduled up for review by the US Fish & Wildlife Service in 2024 in the R1 region. This repository serves as a source for examining occurrences and generating current and future distribution models for *R. kezeri*. Data gathered from the Global Biodiversity Information Facility (GBIF), an open-access source of biodiversity data from sources including iNaturalist, USGS, and museum collections, was utilized in this project. This project was done in collaboration between students of Lewis & Clark College and University of Arizona.
 
 ## Dependencies
-The project uses the following additional R packages and versions (will be installed with file when needed):
-
-base (4.2.2)
-datasets (4.2.2)
-dismo (1.3-9)
-dplyr (1.1.0)
-forcats (1.0.0)
-ggplot2 (3.4.1)
-graphics (4.2.2)
-grDevices (4.2.2)
-lubridate (1.9.2)
-maps (3.4.1)
-maptools (1.1-6)
-methods (4.2.2)
-purrr (1.0.1)
-raster (3.6-20)
-readr (2.1.4)
-rJava (1.0.6)
-sp (1.6-0)
-spocc (1.2.1)
-stats (4.2.2)
-stringr (1.5.0)
-tibble (3.2.0)
-tidyr (1.3.0)
-tidyverse (2.0.0)
-usethis (2.1.6)
-utils (4.2.2)
+The project uses the following additional R packages, which can be downloaded using packages.R file:
+            tidyverse", 
+            "rgbif", 
+            "usethis", 
+            "CoordinateCleaner", 
+            "leaflet", 
+            "mapview", 
+            "webshot2",
+            "sf",
+            "rnaturalearth",
+            "sp",
+            "raster",
+            "dismo",
+            "terra",
+            "ENMeval",
+            "geodata", 
+            "rJava", 
+            "maps"
 
 ## Data
-- snaildata.csv: data harvested from GBIF for Columbia Torrent Salamander.
+- rawData.csv: data harvested from GBIF for Columbia Torrent Salamander.
 - It is important to note that this data has limited data points (234 recordings).
 
 ## Homework
@@ -55,10 +46,28 @@ utils (4.2.2)
 ## Output
 - maxent_outputs
     -maxent.log
-cleandata.csv: a cleaned up version of data.csv
-currentSDM.jpg: a picture of the current *R. kezeri*. species distribution model we generated.
-futureSDM.jpg: a picture of the future *R. kezeri*. species distribution model we generated for 70 years from now.
-occurrencemap.jpg: a picture of the occurrence map for *R. kezeri*. that we generated.
+cleaneData.csv: a cleaned up version of rawData.csv
+rhyacotritonCurrentSdm.jpg: a picture of the current *R. kezeri*. species distribution model we generated.
+rhyacotritonFutureSdm.jpg: a picture of the future *R. kezeri*. species distribution model we generated for 70 years from now.
+rhyacotritonOccurenceMap.png: a picture of the occurrence map for *R. kezeri*. that we generated.
+
+## Scripts
+- CurrentSdm.R: to create the occurrence map of the GBIF data *R. kezeri*. And code for generating the current species distribution model for *R. kezeri*.
+- gbif.R: code for obtaining the GBIF data for *R. kezeri*.
+- FutureSdm.R: code for generating the future species distribution model for *R. kezeri*, 70 years from now.
+- packages.R: to download necessary packages needed
+
+## Running the code
+Run the scripts in the following order:
+
+1. packages.R
+2. gbif.R
+3. CurrentSdm.R
+4. FutureSdm.R
+
+## Caveats
+- It is important to note that this data has limited data points (234 recordings).
+- The species was not recognized as its on species until 1992. This species, Rhyacotriton kezeri, was delineated in 1992 by Good and Wake, who demonstrated its distinctness from Rhyacotriton olympicus.
 
 ## Our favorite Species
 **Spencer's Favorite Species:** My favorite species is *Ursus arctos*, the Brown Bear. I just think everything about them is fascinating. They've got one of the strongest senses of smell on the planet (in terms of effective range), they're super intelligent and unbelievably strong, and they're really cute and fuzzy. Frankly, there's nothing about them I don't like, they're just the best, and it's a real shame that there numbers and range have been going down over time because of human actions.
