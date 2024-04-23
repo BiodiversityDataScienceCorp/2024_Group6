@@ -46,10 +46,10 @@ The project uses the following additional R packages, which can be downloaded us
 ## Output
 - maxent_outputs
     -maxent.log
-cleaneData.csv: a cleaned up version of rawData.csv
-rhyacotritonCurrentSdm.jpg: a picture of the current *R. kezeri*. species distribution model we generated.
-rhyacotritonFutureSdm.jpg: a picture of the future *R. kezeri*. species distribution model we generated for 70 years from now.
-rhyacotritonOccurenceMap.png: a picture of the occurrence map for *R. kezeri*. that we generated.
+- cleanedData.csv: a cleaned up version of rawData.csv
+- rhyacotritonCurrentSdm.jpg: a picture of the current *R. kezeri*. species distribution model we generated.
+- rhyacotritonFutureSdm.jpg: a picture of the future *R. kezeri*. species distribution model we generated for 70 years from now.
+- rhyacotritonOccurenceMap.png: a picture of the occurrence map for *R. kezeri*. that we generated.
 
 ## Scripts
 - CurrentSdm.R: to create the occurrence map of the GBIF data *R. kezeri*. And code for generating the current species distribution model for *R. kezeri*.
