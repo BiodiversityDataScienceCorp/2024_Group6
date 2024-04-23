@@ -50,7 +50,7 @@ The project uses the following additional R packages, which can be downloaded us
 - rhyacotritonFutureSdm.jpg: a picture of the future *R. kezeri*. species distribution model we generated for 70 years from now.
 - rhyacotritonOccurenceMap.png: a picture of the occurrence map for *R. kezeri*. that we generated.
 
-## Scripts
+## Source
 - CurrentSdm.R: to create the occurrence map of the GBIF data *R. kezeri*. And code for generating the current species distribution model for *R. kezeri*.
 - gbif.R: code for obtaining the GBIF data for *R. kezeri*.
 - FutureSdm.R: code for generating the future species distribution model for *R. kezeri*, 70 years from now.
