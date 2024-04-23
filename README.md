@@ -2,6 +2,8 @@
 Group 6 SSA / Species Distribution Modeling
 
 Rian Sidney Wright, Jessica Hernandez, Ashley Phan, Spencer Klaebisch
+[![DOI](https://zenodo.org/badge/753736949.svg)](https://zenodo.org/doi/10.5281/zenodo.11051208)
+
 
 ---
 Our species is *Rhyacotriton kezeri*, The Columbia Torrent Salamander
