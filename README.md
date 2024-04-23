@@ -6,7 +6,7 @@ Rian Sidney Wright, Jessica Hernandez, Ashley Phan, Spencer Klaebisch
 [![DOI](https://zenodo.org/badge/753736949.svg)](https://zenodo.org/doi/10.5281/zenodo.11051208)
 
 
-![R. kezeri](images/R_kezeri.jpg)
+![R. kezeri](data/images/R_kezeri.jpg)
 
 ## Overview
 Our species is *Rhyacotriton kezeri*, also known as the the Columbia Torrent Salamander. The Columbia Torrent Salamander, primarily found along the Coast of Oregon and Washington, inhabits cold streams, seepages, and waterfall splash zones within mature coastal coniferous forests (Emel, et al. 2019). These areas provide the necessary habitat features such as cold, clear water with gravel or rock rubble and low silt levels (Russell, K. R., Mabee, T. J., & Cole, M. B., 2004) . 
