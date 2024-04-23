@@ -43,10 +43,24 @@ usethis (2.1.6)
 utils (4.2.2)
 
 ## Data
-data
 - snaildata.csv: data harvested from GBIF for Columbia Torrent Salamander.
 - It is important to note that this data has limited data points (234 recordings).
 
+## Homework
+- organization of each of our homeworks
+- HW 3: group testing out collaborating on Posit, using Command-Push-Pull to write each of our names and favorite species within an R Markdown file.
+- HW 4: creating occurrence maps for *R. kezeri*.
+- HW 6: creating current and future SDMs for *R. kezeri*.
+
+## Output
+- maxent_outputs
+    -maxent.log
+cleandata.csv: a cleaned up version of data.csv
+currentSDM.jpg: a picture of the current *R. kezeri*. species distribution model we generated.
+futureSDM.jpg: a picture of the future *R. kezeri*. species distribution model we generated for 70 years from now.
+occurrencemap.jpg: a picture of the occurrence map for *R. kezeri*. that we generated.
+
+## Our favorite Species
 **Spencer's Favorite Species:** My favorite species is *Ursus arctos*, the Brown Bear. I just think everything about them is fascinating. They've got one of the strongest senses of smell on the planet (in terms of effective range), they're super intelligent and unbelievably strong, and they're really cute and fuzzy. Frankly, there's nothing about them I don't like, they're just the best, and it's a real shame that there numbers and range have been going down over time because of human actions.
 
 **Ashley's Favorite Species:** My favorite species is the *Provica capensis*, commonly known as the rock hyrax. Rock hyraxes are small, stub-tailed, and rabbit-like. They are mammals and their closest living relatives are elephants. These animals can be found on the continents of Asia and Africa and like to live in arid areas with many rocks and cavities. My favorite thing about them is their interesting behavior known as "hyraceum." Hyraxes constantly urinate in the same place, which are known as latrines. Their urine contains lots of calcium carbonate so it turns their latrines a white color. Hyraceum is the product of the excrement in the latrines after it has been aged. 
